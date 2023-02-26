@@ -3,19 +3,6 @@
 # assumption: if multiple substrings are the shortest substrings containing the required characters, 
 # return the substring that occurs earliest
 
-"""
-Input Strings: "abracadabra", "abc"
-Output: 4
-(Shortest Substring: "brac")
-
-Input Strings: "zxycbaabcdwxyzzxwdcbxyzabccbazyx", "zzyzx" (Fun fact: "Zzyzx" is a town in the Mojave Desert in California!)
-Output: 10
-(Shortest Substring: "zzxwdcbxyz")
-
-Input Strings: "dog", "god"
-Output: 3
-(Shortest Substring: "dog")
-"""
 def shortestsubstring(str1, str2):
     shortest = ""
     str2_dict = {}
