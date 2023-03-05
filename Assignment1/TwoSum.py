@@ -14,8 +14,6 @@ def twoSum(array,k):
                 count += 1
     return count
 
-
-
 print(twoSum([1, 10, 8, 3, 2, 5, 7, 2, -2, -1], 10))
 print(twoSum([1, 10, 8, 3, 2, 5, 7, 2, -2, -1], 8))
 print(twoSum([4, 3, 3, 5, 7, 0, 2, 3, 8, 6], 6))
