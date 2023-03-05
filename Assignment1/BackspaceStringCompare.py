@@ -1,5 +1,8 @@
 # Two-Pointer with "Catch-Up" Condition
 
+# Time Complexity: Quadratic
+# Space Complexity: Constant
+
 def backspacestringcompare(str1, str2):
     def without_backspace(string):
         new_string = ""

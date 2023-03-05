@@ -3,6 +3,9 @@
 # assumption: if multiple substrings are the shortest substrings containing the required characters, 
 # return the substring that occurs earliest
 
+# Time Complexity: Quadratic
+# Space Complexity: Linear
+
 def shortestsubstring(str1, str2):
     shortest = ""
     str2_dict = {}

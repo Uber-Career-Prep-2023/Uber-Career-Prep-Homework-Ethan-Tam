@@ -1,5 +1,8 @@
 # Growing/Shrinking Sliding Window 
 
+# Time Complexity: Quadratic
+# Space Complexity: Constant
+
 def zerosumsubarray(array):
     count = 0
     for i in range(len(array)):

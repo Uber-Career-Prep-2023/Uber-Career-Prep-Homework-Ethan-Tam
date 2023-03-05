@@ -1,5 +1,8 @@
 # Hash the Elements
 
+# Time Complexity: Linear
+# Space Complexity: Linear
+
 def kAnagrams(str1, str2, k):
     if len(str1) != len(str2):
         return False

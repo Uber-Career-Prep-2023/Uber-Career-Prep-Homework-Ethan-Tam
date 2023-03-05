@@ -1,5 +1,8 @@
 # Forward-Backward Two-Pointer
 
+# Time Complexity: Linear
+# Space Complexity: Linear
+
 def reverseVowels(string):
     front = ""
     end = ""

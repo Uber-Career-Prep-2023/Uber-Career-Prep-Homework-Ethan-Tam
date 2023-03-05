@@ -1,5 +1,8 @@
 # Sliding Window
 
+# Time Complexity: Linear
+# Space Complexity: Constant
+
 def maxmeansubarray(array, k):
     highest_mean = 0
     for i in range(len(array) - k + 1):
