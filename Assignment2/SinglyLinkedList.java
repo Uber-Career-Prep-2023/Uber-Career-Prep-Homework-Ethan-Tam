@@ -24,6 +24,7 @@ public class SinglyLinkedList {
 
     // creates new Node with data val at front; returns new head
     // time complexity: theta 1 (constant)
+    // space complexity: constant
     public Node insertAtFront(Node head, int val) {
         Node temp = head.next;
         head.next = new Node(val, temp);
@@ -33,6 +34,7 @@ public class SinglyLinkedList {
 
     // creates new Node with data val at end
     // time complexity: theta size (linear)
+    // space complexity: constant
     public void insertAtBack(Node head, int val) {
         Node p = head.next;
         for (int i = 0; i < size; i++) {
@@ -49,6 +51,7 @@ public class SinglyLinkedList {
 
     // creates new Node with data val after Node loc
     // time complexity: theta size (linear)
+    // space complexity: constant
     public void insertAfter(Node head, int val, Node loc) {
         Node p = head.next;
         for (int i = 0; i < size; i++) {
@@ -63,6 +66,7 @@ public class SinglyLinkedList {
 
     // removes first Node; returns new head
     // time complexity: theta 1 (constant)
+    // space complexity: constant
     public Node deleteFront(Node head) {
         head.next = head.next.next;
         size -= 1;
@@ -71,6 +75,7 @@ public class SinglyLinkedList {
 
     // removes last Node
     // time complexity: theta size (linear)
+    // space complexity: constant
     public void deleteBack(Node head) {
         Node p = head;
         for (int i = 0; i < size; i++) {
@@ -84,6 +89,7 @@ public class SinglyLinkedList {
 
     // deletes Node loc; returns head
     // time complexity: theta size (linear)
+    // space complexity: constant
     public Node deleteNode(Node head, Node loc) {
         Node p = head;
         for (int i = 0; i < size; i++) {
@@ -98,12 +104,14 @@ public class SinglyLinkedList {
 
     // returns length of the list
     // time complexity: theta 1 (constant)
+    // space complexity: constant
     public int length(Node head) {
         return size;
     }
 
     // reverses the linked list iteratively
     // time complexity: theta size (linear)
+    // space complexity: constant
     public Node reverseIterative(Node head) {
         Node prev = null;
         Node curr = head.next;
@@ -121,6 +129,7 @@ public class SinglyLinkedList {
 
     // reverses the linked list recursively (Hint: you will need a helper function)
     // time complexity: theta size (linear)
+    // space complexity: constant
     public Node reverseRecursive(Node head) {
         return reverseRecursiveHelper(head.next, null);
     }
