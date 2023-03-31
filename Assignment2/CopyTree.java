@@ -43,4 +43,4 @@ public class CopyTree extends BinarySearchTree {
 
 }
 
-// I spent 40 on this problem.
+// I spent 40 minutes on this problem.

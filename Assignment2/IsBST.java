@@ -1,3 +1,5 @@
+// Depth First: Pre-Order
+
 public class IsBST extends BinarySearchTree {
     public static void main(String[] args) {
         Node a = new Node(10);
@@ -39,3 +41,5 @@ public class IsBST extends BinarySearchTree {
         }
     }
 }
+
+// I spent 30 minutes on this problem.
