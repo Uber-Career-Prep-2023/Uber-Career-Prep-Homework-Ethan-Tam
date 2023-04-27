@@ -1,3 +1,7 @@
+// Single Pointer
+// Time Complexity: N
+// Space Complexity: N
+
 public class MoveNthLastToFront extends SinglyLinkedList{
     
     public MoveNthLastToFront() {
@@ -16,9 +20,7 @@ public class MoveNthLastToFront extends SinglyLinkedList{
         }
         Node newHead = target.next;
         target.next = target.next.next;
-        Node hold = this.head.next;
-        this.head.next = newHead;
-        newHead.next = hold;
+        this.insertAtFront(this.head, newHead.num);
     }
 
 }

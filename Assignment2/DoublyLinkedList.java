@@ -12,7 +12,7 @@ public class DoublyLinkedList {
         size = 0;
     }
 
-    private class Node {
+    public static class Node {
         int num;
         Node next;
         Node prev;

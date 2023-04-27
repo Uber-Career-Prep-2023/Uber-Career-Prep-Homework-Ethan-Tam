@@ -1,4 +1,6 @@
 // Reset / Catch-Up Two-Pointer
+// Time Complexity: N
+// Space Complexity: N
 
 public class DedupSortedList extends SinglyLinkedList {
     public static void main(String[] args) {

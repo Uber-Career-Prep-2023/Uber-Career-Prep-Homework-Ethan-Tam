@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class SinglyLinkedList {
 
     public static void main(String[] args) {
@@ -16,11 +13,6 @@ public class SinglyLinkedList {
 
         Node p = sl.head.next;
         System.out.println(p);
-        
-        // for (int i = 0; i < 1; i++) {
-        //     System.out.println(p.num);
-        //     p = p.next;
-        // }
         
     }
 

@@ -1,4 +1,6 @@
 // Depth First: Pre-Order
+// Time Complexity: logN
+// Space Complexity: N
 
 public class IsBST extends BinarySearchTree {
     public static void main(String[] args) {
