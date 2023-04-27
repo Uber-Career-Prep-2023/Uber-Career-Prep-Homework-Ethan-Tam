@@ -1,6 +1,26 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class SinglyLinkedList {
 
     public static void main(String[] args) {
+        SinglyLinkedList sl = new SinglyLinkedList();
+        sl.head.next = new Node(1, null);
+        // sl.head.next.next = new Node(2, null);
+        // sl.head.next.next.next = new Node(3, null);
+        sl.size = 1;
+        
+        sl.head = sl.deleteNode(sl.head, new Node(1, null) );
+        
+        System.out.println(sl.size);
+
+        Node p = sl.head.next;
+        System.out.println(p);
+        
+        // for (int i = 0; i < 1; i++) {
+        //     System.out.println(p.num);
+        //     p = p.next;
+        // }
         
     }
 
@@ -12,7 +32,7 @@ public class SinglyLinkedList {
         size = 0;
     }
 
-    private class Node {
+    public static class Node {
         int num;
         Node next;
 
@@ -92,11 +112,15 @@ public class SinglyLinkedList {
     // space complexity: constant
     public Node deleteNode(Node head, Node loc) {
         Node p = head;
+        
         for (int i = 0; i < size; i++) {
-            if (p.next.equals(loc)) {
+            
+            if (p.next.num == loc.num) {
+                
                 p.next = p.next.next;
                 break;
             }
+            p = p.next;
         }
         size -= 1;
         return head;
@@ -142,6 +166,8 @@ public class SinglyLinkedList {
             return reverseRecursiveHelper(curr.next, new Node(curr.num, temp));
         }
     }
+
+    
 
 
 
