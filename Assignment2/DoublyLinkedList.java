@@ -48,6 +48,7 @@ public class DoublyLinkedList {
         }
 
         p.next = new Node(val, null, p);
+        head.prev = p.next;
         size += 1;
     }
 
