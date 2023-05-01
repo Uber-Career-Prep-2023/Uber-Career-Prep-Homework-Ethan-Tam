@@ -24,3 +24,5 @@ public class MoveNthLastToFront extends SinglyLinkedList{
     }
 
 }
+
+// I spent 30 minutes on this problem.

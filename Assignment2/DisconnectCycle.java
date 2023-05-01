@@ -20,3 +20,5 @@ public class DisconnectCycle extends SinglyLinkedList {
         p.next = null;
     }
 }
+
+// I spent 20 minutes on this problem.

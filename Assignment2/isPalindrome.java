@@ -23,3 +23,5 @@ public class isPalindrome extends DoublyLinkedList{
 
 
 }
+
+// I spent 30 minutes on this problem.

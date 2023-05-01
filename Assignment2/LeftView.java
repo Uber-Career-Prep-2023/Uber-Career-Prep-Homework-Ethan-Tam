@@ -52,3 +52,5 @@ public class LeftView extends BinarySearchTree {
     }
 
 }
+
+// I spent 40 minutes on this problem.

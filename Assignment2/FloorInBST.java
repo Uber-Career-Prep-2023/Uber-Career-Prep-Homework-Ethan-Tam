@@ -26,3 +26,5 @@ public class FloorInBST extends BinarySearchTree {
         return prev.num;
     }
 }
+
+// I spent 30 minutes on this problem.
