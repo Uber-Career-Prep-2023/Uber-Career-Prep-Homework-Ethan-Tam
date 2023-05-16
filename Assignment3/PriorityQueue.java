@@ -10,18 +10,18 @@ public class PriorityQueue {
     }
 
     public static void main(String[] args) {
-        PriorityQueue h = new PriorityQueue();
-        h.insert("a", 5);
-        h.insert("b", 3);
-        h.insert("c", 8);
-        h.insert("d", 2);
-        h.insert("e", 9);
+        PriorityQueue pq = new PriorityQueue();
+        pq.insert("a", 5);
+        pq.insert("b", 3);
+        pq.insert("c", 8);
+        pq.insert("d", 2);
+        pq.insert("e", 9);
 
-        System.out.println("Smallest element: " + h.top());
-        System.out.println("Heapified array after insertions: " + h.printArr());
-        h.remove();
-        System.out.println( "Heapified array after deleting smallest element: " + h.printArr());
-        System.out.println("Smallest element: " + h.top());
+        System.out.println("Smallest element: " + pq.top());
+        System.out.println("Heapified array after insertions: " + pq.printArr());
+        pq.remove();
+        System.out.println( "Heapified array after deleting smallest element: " + pq.printArr());
+        System.out.println("Smallest element: " + pq.top());
     }
 
     public static class Pair {
