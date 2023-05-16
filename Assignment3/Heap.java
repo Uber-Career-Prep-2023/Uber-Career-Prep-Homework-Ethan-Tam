@@ -17,9 +17,11 @@ public class Heap {
         h.insert(2);
         h.insert(9);
 
-        System.out.println(h.arr);
+        System.out.println("Smallest element: " + h.top());
+        System.out.println("Heapified array after insertions: " + h.arr);
         h.remove();
-        System.out.println(h.arr);
+        System.out.println( "Heapified array after deleting smallest element: " +h.arr);
+        System.out.println("Smallest element: " + h.top());
     }
 
     public int top() {
@@ -63,8 +65,8 @@ public class Heap {
         int chosenIndex = 0;
         int chosen = 0;
     
-        while (chosen < x && chosen < arr.size()) {
-            System.out.println(chosenIndex);
+        while (chosen < x && chosenIndex < arr.size() - 1) {
+            
             if (left < right) {
                 chosenIndex = leftIndex;
                 chosen = left;
