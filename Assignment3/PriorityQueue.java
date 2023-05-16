@@ -1,44 +1,62 @@
 import java.util.ArrayList;
 
-public class Heap {
-    private ArrayList<Integer> arr;
+public class PriorityQueue {
+    private ArrayList<Pair> arr;
 
-    public Heap() {
+    public PriorityQueue() {
         arr = new ArrayList<>();
         // filler for first element of backing array
-        this.insert(Integer.MAX_VALUE);
+        this.insert("start", Integer.MAX_VALUE);
     }
 
     public static void main(String[] args) {
-        Heap h = new Heap();
-        h.insert(5);
-        h.insert(3);
-        h.insert(8);
-        h.insert(2);
-        h.insert(9);
+        PriorityQueue h = new PriorityQueue();
+        h.insert("a", 5);
+        h.insert("b", 3);
+        h.insert("c", 8);
+        h.insert("d", 2);
+        h.insert("e", 9);
 
         System.out.println("Smallest element: " + h.top());
-        System.out.println("Heapified array after insertions: " + h.arr);
+        System.out.println("Heapified array after insertions: " + h.printArr());
         h.remove();
-        System.out.println( "Heapified array after deleting smallest element: " + h.arr);
+        System.out.println( "Heapified array after deleting smallest element: " + h.printArr());
         System.out.println("Smallest element: " + h.top());
+    }
+
+    public static class Pair {
+        private final String key;
+        private final int value;
+    
+        public Pair(String key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+    
+        public String getKey() {
+            return this.key;
+        }
+    
+        public int getValue() {
+            return this.value;
+        }
     }
 
     public int top() {
-        return arr.get(1);
+        return arr.get(1).getValue();
     }
 
-    public void insert(int x) {
-        arr.add(x);
+    public void insert(String x, int weight) {
+        arr.add(new Pair(x, weight));
         
         int xIndex = arr.size() - 1;
 
         int parentIndex = xIndex / 2;
-        int parent = arr.get(parentIndex);
+        Pair parent = arr.get(parentIndex);
 
         // keep swapping until the parent is less than or equal to x
-        while (parent > x && parent != Integer.MAX_VALUE) {
-            arr.set(parentIndex, x);
+        while (parent.getValue() > weight && parent.getValue() != Integer.MAX_VALUE) {
+            arr.set(parentIndex, new Pair(x, weight));
             arr.set(xIndex, parent);
             xIndex = parentIndex;
             parentIndex = xIndex / 2;
@@ -48,7 +66,7 @@ public class Heap {
 
     public void remove() {
         // swap top element with last element
-        int temp = arr.get(arr.size() - 1);
+        Pair temp = arr.get(arr.size() - 1);
         arr.set(arr.size() - 1, arr.get(1));
         arr.set(1, temp);
 
@@ -57,16 +75,16 @@ public class Heap {
 
         // heapify
         int leftIndex = 2;
-        int left = arr.get(leftIndex);
+        Pair left = arr.get(leftIndex);
         int rightIndex = 3;
-        int right = arr.get(rightIndex);
+        Pair right = arr.get(rightIndex);
         int xIndex = 1;
-        int x = arr.get(xIndex);
+        Pair x = arr.get(xIndex);
         int chosenIndex = 0;
-        int chosen = 0;
+        Pair chosen = new Pair("temp", Integer.MIN_VALUE);
     
-        while (chosen < x && chosenIndex < arr.size() - 1) {
-            if (left < right) {
+        while (chosen.getValue() < x.getValue() && chosenIndex < arr.size() - 1) {
+            if (left.getValue() < right.getValue()) {
                 chosenIndex = leftIndex;
                 chosen = left;
             } else {
@@ -89,14 +107,24 @@ public class Heap {
             if (leftIndex < arr.size()) {
                 left = arr.get(leftIndex);
             } else {
-                left = Integer.MAX_VALUE;
+                left = new Pair("temp", Integer.MAX_VALUE);
             }
 
             if (rightIndex < arr.size()) {
                 right = arr.get(rightIndex);
             } else {
-                right = Integer.MAX_VALUE;
+                right = new Pair("temp", Integer.MAX_VALUE);
             }
         }
+    }
+
+    public String printArr() {
+        String s = "{";
+        for (Pair p : arr) {
+            s += "(" + p.getKey() + ", " + p.getValue() + "), ";
+        }
+        s = s.substring(0, s.length() - 2);
+        s += "}";
+        return s;
     }
 }
