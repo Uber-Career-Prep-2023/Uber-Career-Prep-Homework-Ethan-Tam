@@ -1,5 +1,5 @@
 // Graph : Breadth First Search
-// Time Complexity: O(N^2)
+// Time Complexity: O(N)
 // Space Complexity: O(N)
 
 import java.util.Arrays;
@@ -34,10 +34,13 @@ public class NumberOfIslands {
     public int numIslands() {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
-                search(i, j);
-                if (foundOne) {
-                    count += 1;
-                    foundOne = false;
+                // only search unvisited nodes
+                if (!visited[i][j]) {
+                    search(i, j);
+                    if (foundOne) {
+                        count += 1;
+                        foundOne = false;
+                    }
                 }
             }
         }
@@ -47,7 +50,7 @@ public class NumberOfIslands {
     
     public void search(int row, int column) {
         // only recurse if the index is a 1 and has not yet been visited
-        if (arr[row][column] == 0 && !visited[row][column]) {
+        if (arr[row][column] == 1 && !visited[row][column]) {
             visited[row][column] = true;
 
             // up
