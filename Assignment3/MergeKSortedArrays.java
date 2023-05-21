@@ -1,8 +1,6 @@
 // Heap
 // Time Complexity: O(N(Log(N))) 
 // Space Complexity: N
-
-
 import java.util.ArrayList;
 
 public class MergeKSortedArrays extends Heap {
@@ -75,7 +73,5 @@ public class MergeKSortedArrays extends Heap {
 
         return finalArray;
     }
-    
 }
-
 // I spent 40 minutes on this problem.
