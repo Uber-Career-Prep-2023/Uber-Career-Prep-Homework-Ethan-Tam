@@ -1,3 +1,8 @@
+// Adjacency List, Topological Sort
+// Time Complexity: O(V + E)
+// Space Complexity: O(V + E)
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
@@ -92,5 +97,6 @@ public class PrerequisiteCourses {
         }
         s.push(v);
     }
-
 }
+
+// I spent 40 minutes on this problem.
