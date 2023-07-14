@@ -3,6 +3,10 @@ package hw.Assignment4;
 import java.util.HashMap;
 
 public class Trie {
+    public static void main(String[] args) {
+        Trie t = new Trie();
+        t.insert("hello");
+    }
     public static class TrieNode {
         HashMap<Character, TrieNode> children;
         boolean validWord;
