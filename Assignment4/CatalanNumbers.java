@@ -1,5 +1,7 @@
 package hw.Assignment4;
 
+// Time Complexity: O(N^2)
+// Space Complexity: O(1)
 public class CatalanNumbers {
     public static void main(String[] args) {
         printCatalan(5);
@@ -23,3 +25,4 @@ public class CatalanNumbers {
     }
 
 }
+// I spent 40 minutes on this problem.
