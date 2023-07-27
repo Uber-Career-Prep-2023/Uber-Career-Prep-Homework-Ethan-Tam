@@ -1,3 +1,5 @@
+// Time Complexity: O(2^N)
+// Space Complexity: O(2^N)
 package hw.Assignment4;
 import java.util.Queue;
 import java.util.LinkedList;
@@ -51,3 +53,4 @@ public class MinCostStairClimbing {
     }
 
 }
+// I spent 30 minutes on this problem.
