@@ -3,7 +3,6 @@ package hw.Assignment4;
 // Space Complexity: N
 
 public class LargestSquareOf1s {
-
     public static void main(String[] args) {
         LargestSquareOf1s l = new LargestSquareOf1s();
         int[][] a = {
