@@ -72,3 +72,4 @@ public class AdoptAPet {
         }
     }
 }
+// I finished this problem in 40 minutes.
