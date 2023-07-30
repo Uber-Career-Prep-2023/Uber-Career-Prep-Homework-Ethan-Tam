@@ -2,7 +2,7 @@ package hw.Assignment4;
 
 // Time Complexity: O(N * M) where N = number of coins and M = sum
 // Space Complexity: O(sum)
-import java.util.Arrays;
+
 public class CoinChange {
     public static void main(String[] args) {
         int[] coins = {2,5,10};
@@ -20,7 +20,6 @@ public class CoinChange {
         for (int coin : coins) {
             for (int i = coin; i < sum+1; i++) {
                 dp[i] += dp[i - coin];
-                // System.out.println(Arrays.toString(dp));
             }
         }
 
